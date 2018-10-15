@@ -151,7 +151,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539635226028" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539635384462" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../NumberConverter" />
     <property name="settings.editor.selected.configurable" value="com.zeroturnaround.javarebel.idea.plugin.settings.startup.StartupConfigurable" />
   </component>
@@ -167,7 +167,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.RomanIntegerConverter">
+  <component name="RunManager" selected="JUnit.NumberConverterTest.convertToIntegerRomanTest">
     <configuration name="RomanIntegerConverter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.masum.home.RomanIntegerConverter" />
       <module name="NumberConverter" />
@@ -177,6 +177,38 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NumberConverterTest.convertToIntegerInvalidRomanTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="NumberConverter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.masum.home.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.masum.home" />
+      <option name="MAIN_CLASS_NAME" value="com.masum.home.NumberConverterTest" />
+      <option name="METHOD_NAME" value="convertToIntegerInvalidRomanTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NumberConverterTest.convertToIntegerRomanTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="NumberConverter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.masum.home.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.masum.home" />
+      <option name="MAIN_CLASS_NAME" value="com.masum.home.NumberConverterTest" />
+      <option name="METHOD_NAME" value="convertToIntegerRomanTest" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -192,9 +224,13 @@
     <list>
       <item itemvalue="Remote.remote" />
       <item itemvalue="Application.RomanIntegerConverter" />
+      <item itemvalue="JUnit.NumberConverterTest.convertToIntegerInvalidRomanTest" />
+      <item itemvalue="JUnit.NumberConverterTest.convertToIntegerRomanTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.NumberConverterTest.convertToIntegerRomanTest" />
+        <item itemvalue="JUnit.NumberConverterTest.convertToIntegerInvalidRomanTest" />
         <item itemvalue="Application.RomanIntegerConverter" />
       </list>
     </recent_temporary>
