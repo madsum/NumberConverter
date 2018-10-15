@@ -51,7 +51,7 @@ public class NumberConverter {
             System.out.println("Empty or null is not allowed! Please enter valid Roman number.");
             return null;
         }
-        Integer number = 0;
+        int number = 0;
         for (int i = 0; i< input.length(); i++) {
             int currentCharValue = romanCharToInteger(input.charAt(i));
             if (currentCharValue < 0) {

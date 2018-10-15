@@ -174,7 +174,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539635500978" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539635610703" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../NumberConverter" />
     <property name="settings.editor.selected.configurable" value="com.zeroturnaround.javarebel.idea.plugin.settings.startup.StartupConfigurable" />
   </component>
@@ -290,6 +290,14 @@
       <updated>1539634930044</updated>
     </task>
     <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="NumberConverterTest_convertToIntegerInvalidRomanTest - 2018.10.15 at 23h 29m 31s.xml">
+      <configuration name="NumberConverterTest.convertToIntegerInvalidRomanTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="NumberConverterTest_convertToIntegerRomanTest - 2018.10.15 at 23h 29m 35s.xml">
+      <configuration name="NumberConverterTest.convertToIntegerRomanTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="1919" y="0" width="1282" height="800" extended-state="6" />
