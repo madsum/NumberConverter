@@ -1,7 +1,8 @@
 package com.masum.home;
 
 /**
- *OctalIntegerConverter is to execute check the result of NumberConverter
+ *OctalIntegerConverter is simple main class to execute NumberConverter to check the result of
+ *octal to integer conversion.
  *
  */
 public class OctalIntegerConverter {

@@ -2,7 +2,7 @@ package com.masum.home;
 
 
 /** NumberConverter is a generic numbering system conversion utility class.
- * The idea is that the same class can be used for various type of number conversion.
+ * The idea is that the same class can be reused for various type of number conversion.
  * For example, e.g. roman to integer, binary to integer, octal to integer, etc.
  * At this moment it has only roman to Integer and octal to integer conversion.
  * @author Muhammed Masum Islam
@@ -33,20 +33,20 @@ public class NumberConverter {
      * @param input String type roman number
      * @return Integer for a valid roman number.
      */
-    private static Integer romanCharToInteger(String input){
+    private static Integer romanToInteger(String input){
         if (input == null || input.length() == 0) {
             System.out.println("Empty or null is not allowed! Please enter valid Roman number.");
             return null;
         }
         int number = 0;
         for (int i = 0; i< input.length(); i++) {
-            int currentCharValue = romanCharToInteger(input.charAt(i));
+            int currentCharValue = getRomanCharToInteger(input.charAt(i));
             if (currentCharValue < 0) {
                 System.out.println("Input is not a valid roman number.  Please enter valid Roman number.");
                 return null;
             }
             if(i+1 < input.length()){
-                int nextCharValue = romanCharToInteger(input.charAt(i+1));
+                int nextCharValue = getRomanCharToInteger(input.charAt(i+1));
                 if(currentCharValue >= nextCharValue){
                     number = number + currentCharValue;
                 }else{
@@ -83,7 +83,7 @@ public class NumberConverter {
      * @param letter a roman number
      * @return int equivalent roman number.
      */
-    private static int romanCharToInteger(char letter) {
+    private static int getRomanCharToInteger(char letter) {
         switch (letter) {
             case 'M':
                 return 1000;
@@ -120,7 +120,7 @@ public class NumberConverter {
      */
     public static Integer convertToInteger(String input, ConversionType conversionType) {
         if(conversionType == ConversionType.ROMAN_TO_INTEGER){
-            return romanCharToInteger(input);
+            return romanToInteger(input);
         }else if(conversionType == ConversionType.OCTAL_TO_DECIMAL){
             return octalToDecimal(input);
         }else{

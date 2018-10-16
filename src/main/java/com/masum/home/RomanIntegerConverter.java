@@ -1,7 +1,8 @@
 package com.masum.home;
 
 /**
- *RomanIntegerConverter is to execute check the result of NumberConverter
+ *RomanIntegerConverter is simple main to execute NumberConverter to check the result of
+ *roman to integer conversion.
  *
  */
 public class RomanIntegerConverter
