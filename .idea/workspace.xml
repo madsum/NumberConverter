@@ -115,9 +115,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1919" />
-    <option name="width" value="1282" />
-    <option name="height" value="800" />
+    <option name="x" value="396" />
+    <option name="y" value="55" />
+    <option name="width" value="1274" />
+    <option name="height" value="796" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -188,7 +189,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539671692040" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539671879944" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../NumberConverter" />
     <property name="settings.editor.selected.configurable" value="com.zeroturnaround.javarebel.idea.plugin.settings.startup.StartupConfigurable" />
   </component>
