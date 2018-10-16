@@ -46,7 +46,7 @@ public class NumberConverter {
      * @param input String type roman number
      * @return Integer for a valid roman number.
      */
-    protected Integer romanCharToInteger(String input){
+    private Integer romanCharToInteger(String input){
         if (input == null || input.length() == 0) {
             System.out.println("Empty or null is not allowed! Please enter valid Roman number.");
             return null;
@@ -79,8 +79,13 @@ public class NumberConverter {
      * @param input String type octal number
      * @return Integer for valid octal input
      */
-    protected Integer octalToDecimal(String input){
-        return Integer.parseInt(input,8);
+    private Integer octalToDecimal(String input){
+        try{
+            return Integer.parseInt(input,8);
+        }catch (NumberFormatException ex){
+            System.out.println("Exception: "+ex.getMessage());
+        }
+        return null;
     }
     /**
      *
