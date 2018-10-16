@@ -1,7 +1,7 @@
 package com.masum.home;
 
 
-/** NumberConverter is a generic numbering system conversion class.
+/** NumberConverter is a generic numbering system conversion utility class.
  * The idea is that the same class can be used for various type of number conversion.
  * For example, e.g. roman to integer, binary to integer, octal to integer, etc.
  * At this moment it has only roman to Integer and octal to integer conversion.
@@ -29,24 +29,11 @@ public class NumberConverter {
     }
 
     /**
-     *  Conversion type enum.
-     */
-    private ConversionType conversionType;
-
-    /**
-     *   Class constructor
-     * @param conversionType type of conversion as enum
-     */
-    public NumberConverter(ConversionType conversionType) {
-        this.conversionType = conversionType;
-    }
-
-    /**
      * Converts input roman number to Integer
      * @param input String type roman number
      * @return Integer for a valid roman number.
      */
-    protected Integer romanCharToInteger(String input){
+    private static Integer romanCharToInteger(String input){
         if (input == null || input.length() == 0) {
             System.out.println("Empty or null is not allowed! Please enter valid Roman number.");
             return null;
@@ -79,8 +66,13 @@ public class NumberConverter {
      * @param input String type octal number
      * @return Integer for valid octal input
      */
-    protected Integer octalToDecimal(String input){
-        return Integer.parseInt(input,8);
+    private static Integer octalToDecimal(String input){
+        try{
+           return Integer.parseInt(input,8);
+        }catch (NumberFormatException ex){
+            System.out.println("Exception: "+ex.getMessage());
+        }
+        return null;
     }
     /**
      *
@@ -91,7 +83,7 @@ public class NumberConverter {
      * @param letter a roman number
      * @return int equivalent roman number.
      */
-    private int romanCharToInteger(char letter) {
+    private static int romanCharToInteger(char letter) {
         switch (letter) {
             case 'M':
                 return 1000;
@@ -118,7 +110,15 @@ public class NumberConverter {
      * @return Integer equivalent input number
      * @see NumberConverter
      */
-    public Integer convertToInteger(String input) {
+
+    /**
+     *
+     * @param input number (either roman  or octal number)
+     * @param conversionType type of conversion either  ConversionType.ROMAN_TO_INTEGER or
+     *                       ConversionType.OCTAL_TO_DECIMAL
+     * @return Integer of the equivalent input number and desired conversion type.
+     */
+    public static Integer convertToInteger(String input, ConversionType conversionType) {
         if(conversionType == ConversionType.ROMAN_TO_INTEGER){
             return romanCharToInteger(input);
         }else if(conversionType == ConversionType.OCTAL_TO_DECIMAL){

@@ -8,7 +8,6 @@ public class RomanIntegerConverter
 {
     public static void main( String[] args )
     {
-        NumberConverter numberConverter = new NumberConverter(NumberConverter.ConversionType.ROMAN_TO_INTEGER);
-        System.out.println(numberConverter.convertToInteger(("MCMLXXXV")));
+        System.out.println(NumberConverter.convertToInteger("MCMLXXXV", NumberConverter.ConversionType.ROMAN_TO_INTEGER));
     }
 }

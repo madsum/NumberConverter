@@ -7,7 +7,6 @@ package com.masum.home;
 public class OctalIntegerConverter {
     public static void main( String[] args )
     {
-        NumberConverter numberConverter = new NumberConverter(NumberConverter.ConversionType.OCTAL_TO_DECIMAL);
-        System.out.println(numberConverter.convertToInteger(("100")));
+        System.out.println(NumberConverter.convertToInteger("100", NumberConverter.ConversionType.OCTAL_TO_DECIMAL));
     }
 }
