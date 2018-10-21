@@ -20,7 +20,7 @@ public class NumberConverterTest
         String romanInput = "MCMLXXXV";
         int expectedResult = 1985;
         NumberConverter numberConverter = new NumberConverter(NumberConverter.ConversionType.ROMAN_TO_INTEGER);
-        int actualResult = numberConverter.convertToInteger(romanInput);
+        int actualResult = numberConverter.romanToIneger(romanInput);
         assertEquals(expectedResult, actualResult);
     }
 
@@ -32,7 +32,7 @@ public class NumberConverterTest
         // for MCPQMLXXXV we expect return null. Because it has invalid roman letter P and Q
         String romanInput = "MCPQMLXXXV";
         NumberConverter numberConverter = new NumberConverter(NumberConverter.ConversionType.ROMAN_TO_INTEGER);
-        Integer actualResult = numberConverter.convertToInteger(romanInput);
+        Integer actualResult = numberConverter.romanToIneger(romanInput);
         Assert.assertNull(actualResult);
     }
 
@@ -44,8 +44,9 @@ public class NumberConverterTest
         // octal 100 = decimal 64
         String octalInput = "100";
         int expectedResult = 64;
-        NumberConverter numberConverter = new NumberConverter(NumberConverter.ConversionType.OCTAL_TO_DECIMAL);
-        int actualResult = numberConverter.convertToInteger(octalInput);
+        //NumberConverter numberConverter = new NumberConverter(NumberConverter.ConversionType.OCTAL_TO_DECIMAL);
+        OctalToInteger octalToInteger = new OctalToInteger();
+        int actualResult = octalToInteger.octalToDecimal(octalInput);
         assertEquals(expectedResult, actualResult);
     }
 }

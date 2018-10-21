@@ -33,6 +33,10 @@ public class NumberConverter {
      */
     private ConversionType conversionType;
 
+    public NumberConverter(){
+
+    }
+
     /**
      *   Class constructor
      * @param conversionType type of conversion as enum
@@ -52,8 +56,9 @@ public class NumberConverter {
             return null;
         }
         int number = 0;
-        for (int i = 0; i< input.length(); i++) {
-            int currentCharValue = romanCharToInteger(input.charAt(i));
+        String upperInput = input.toUpperCase();
+        for (int i = 0; i< upperInput.length(); i++) {
+            int currentCharValue = romanCharToInteger(upperInput.charAt(i));
             if (currentCharValue < 0) {
                 System.out.println("Input is not a valid roman number.  Please enter valid Roman number.");
                 return null;
@@ -74,19 +79,6 @@ public class NumberConverter {
         return number;
     }
 
-    /**
-     * Converts octal number to decimal number
-     * @param input String type octal number
-     * @return Integer for valid octal input
-     */
-    private Integer octalToDecimal(String input){
-        try{
-            return Integer.parseInt(input,8);
-        }catch (NumberFormatException ex){
-            System.out.println("Exception: "+ex.getMessage());
-        }
-        return null;
-    }
     /**
      *
      * @param letter  repents a roman number
@@ -123,7 +115,7 @@ public class NumberConverter {
      * @return Integer equivalent input number
      * @see NumberConverter
      */
-    public Integer convertToInteger(String input) {
+   /* public Integer convertToInteger(String input) {
         if(conversionType == ConversionType.ROMAN_TO_INTEGER){
             return romanCharToInteger(input);
         }else if(conversionType == ConversionType.OCTAL_TO_DECIMAL){
@@ -131,6 +123,9 @@ public class NumberConverter {
         }else{
             return null;
         }
-    }
+    }*/
 
+    public Integer romanToIneger(String input){
+        return romanCharToInteger(input);
+    }
 }
